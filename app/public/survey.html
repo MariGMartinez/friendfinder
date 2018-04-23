@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="name" class="form-control" placeholder="Please Enter Your Name" required>
+        <input type="text" id="photo" class="form-control" placeholder="Please Enter Your Photo" required>
+
+        <h3>Question 1</h3>
+        <p>Please rate your happiness level</p>
+        <select class="chosen-select" id="q1">
+            <option value=""></option>
+            <option value="1">Awful</option>
+            <option value="2">Not very good</option>
+            <option value="3">Good</option>
+            <option value="4">Really Good</option>
+            <option value="5">Brilliant</option>
+        </select>
+        <!-- Other question 2 - 10 -->
+        <h3>Question 2</h3>
+        <p>I feel very thankful for my degree of physical health</p>
+        <select class="chosen-select" id="q2">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 3</h3>
+        <p>I count my blessings for what I have in this world.</p>
+        <select class="chosen-select" id="q3">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 4</h3>
+        <p>I reflect on the worst times in my life to help me realize how fortunate I am now.</p>
+        <select class="chosen-select" id="q4">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+
+        <h3>Question 5</h3>
+        <p>I think of people who are less forunate than I am to help me feel more satisfied with my circumstances</p>
+        <select class="chosen-select" id="q5">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 6</h3>
+        <p>I remind myself how fortunate I am to have the privilege and opportunities I have encountered in life</p>
+        <select class="chosen-select" id="q6">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 7</h3>
+        <p>I reflect on how fortunate I am to have basic things in life like food,clothing,and shelter.</p>
+        <select class="chosen-select" id="q7">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 8</h3>
+        <p>I really notice and acknowledge the good things I get in life. </p>
+        <select class="chosen-select" id="q8">
+            <option value=""></option>
+            <option value="1">Never</option>
+            <option value="2">Once a year</option>
+            <option value="3">A few times a year</option>
+            <option value="4">Once a month</option>
+            <option value="5">More than once a week</option>
+        </select>
+        <h3>Question 9</h3>
+        <p>I am content with what I have.</p>
+        <select class="chosen-select" id="q9">
+            <option value=""></option>
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neither Agree</option>
+            <option value="4">Somewhat Agree</option>
+            <option value="5">Agree</option>
+        </select>
+        <h3>Question 10</h3>
+        <p>Although I dont have everything I want, I am thankful for what I have</p>
+        <select class="chosen-select" id="q10">
+            <option value=""></option>
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neither Agree</option>
+            <option value="4">Somewhat Agree</option>
+            <option value="5">Agree</option>
+        </select>
+
+        <button id="submit">Submit</button>
+    </div>
+
+    <div>
+        <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!---Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">
+                            <strong> Best Match</strong>
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+
+        var data = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val(),
+            ]
+
+        }
+        console.log(data)
+        $.post("/api/friends", data, function (data) {
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+            $("#results-modal").modal("toggle");
+        })
+
+
+
+
+
+    })
+</script>
+
+</html>
